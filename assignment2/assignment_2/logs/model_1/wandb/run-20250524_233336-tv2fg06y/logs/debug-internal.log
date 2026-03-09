@@ -1,0 +1,49 @@
+2025-05-24 23:33:36,696 INFO    StreamThr :14534 [internal.py:wandb_internal():86] W&B internal server running at pid: 14534, started at: 2025-05-24 23:33:36.694726
+2025-05-24 23:33:36,701 DEBUG   HandlerThread:14534 [handler.py:handle_request():146] handle_request: status
+2025-05-24 23:33:36,706 INFO    WriterThread:14534 [datastore.py:open_for_write():87] open: ./logs/model_1/wandb/run-20250524_233336-tv2fg06y/run-tv2fg06y.wandb
+2025-05-24 23:33:36,709 DEBUG   SenderThread:14534 [sender.py:send():379] send: header
+2025-05-24 23:33:36,710 DEBUG   SenderThread:14534 [sender.py:send():379] send: run
+2025-05-24 23:33:36,714 INFO    SenderThread:14534 [sender.py:_setup_resume():749] checking resume status for None/assignment_2/tv2fg06y
+2025-05-24 23:33:37,250 INFO    SenderThread:14534 [dir_watcher.py:__init__():211] watching files in: ./logs/model_1/wandb/run-20250524_233336-tv2fg06y/files
+2025-05-24 23:33:37,250 INFO    SenderThread:14534 [sender.py:_start_run_threads():1124] run started: tv2fg06y with start time 1748122416.696719
+2025-05-24 23:33:37,257 DEBUG   HandlerThread:14534 [handler.py:handle_request():146] handle_request: check_version
+2025-05-24 23:33:37,257 DEBUG   SenderThread:14534 [sender.py:send_request():406] send_request: check_version
+2025-05-24 23:33:37,368 DEBUG   HandlerThread:14534 [handler.py:handle_request():146] handle_request: run_start
+2025-05-24 23:33:37,501 DEBUG   HandlerThread:14534 [system_info.py:__init__():26] System info init
+2025-05-24 23:33:37,501 DEBUG   HandlerThread:14534 [system_info.py:__init__():41] System info init done
+2025-05-24 23:33:37,501 INFO    HandlerThread:14534 [system_monitor.py:start():194] Starting system monitor
+2025-05-24 23:33:37,501 INFO    SystemMonitor:14534 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-05-24 23:33:37,501 INFO    HandlerThread:14534 [system_monitor.py:probe():214] Collecting system info
+2025-05-24 23:33:37,503 INFO    SystemMonitor:14534 [interfaces.py:start():190] Started cpu monitoring
+2025-05-24 23:33:37,504 INFO    SystemMonitor:14534 [interfaces.py:start():190] Started disk monitoring
+2025-05-24 23:33:37,506 INFO    SystemMonitor:14534 [interfaces.py:start():190] Started gpu monitoring
+2025-05-24 23:33:37,506 INFO    SystemMonitor:14534 [interfaces.py:start():190] Started memory monitoring
+2025-05-24 23:33:37,507 INFO    SystemMonitor:14534 [interfaces.py:start():190] Started network monitoring
+2025-05-24 23:33:37,523 DEBUG   HandlerThread:14534 [system_info.py:probe():150] Probing system
+2025-05-24 23:33:37,559 DEBUG   HandlerThread:14534 [gitlib.py:_init_repo():56] git repository is invalid
+2025-05-24 23:33:37,560 DEBUG   HandlerThread:14534 [system_info.py:probe():198] Probing system done
+2025-05-24 23:33:37,560 DEBUG   HandlerThread:14534 [system_monitor.py:probe():223] {'os': 'Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.37', 'python': '3.11.4', 'heartbeatAt': '2025-05-24T21:33:37.523717', 'startedAt': '2025-05-24T21:33:36.685763', 'docker': None, 'cuda': None, 'args': ('--device-id=0', '--config-file-path=./configs/config_model_1.yaml', '--experiment-name=model_1', '--num-epochs=2'), 'state': 'running', 'program': '/home/rodrigo/jmcs/dl/assignement2/assignment_2/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'LAPTOP-DS80IAF6', 'username': 'rodrigo', 'executable': '/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/bin/python', 'cpu_count': 10, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2687.9970000000008, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}, {'current': 2687.997, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 250.92389297485352, 'used': 105.15268325805664}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 7.623401641845703}}
+2025-05-24 23:33:37,560 INFO    HandlerThread:14534 [system_monitor.py:probe():224] Finished collecting system info
+2025-05-24 23:33:37,560 INFO    HandlerThread:14534 [system_monitor.py:probe():227] Publishing system info
+2025-05-24 23:33:37,560 INFO    HandlerThread:14534 [system_monitor.py:probe():229] Finished publishing system info
+2025-05-24 23:33:37,564 DEBUG   SenderThread:14534 [sender.py:send():379] send: files
+2025-05-24 23:33:37,564 INFO    SenderThread:14534 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2025-05-24 23:33:37,628 DEBUG   HandlerThread:14534 [handler.py:handle_request():146] handle_request: python_packages
+2025-05-24 23:33:37,628 DEBUG   SenderThread:14534 [sender.py:send_request():406] send_request: python_packages
+2025-05-24 23:33:37,628 DEBUG   HandlerThread:14534 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-24 23:33:37,629 DEBUG   SenderThread:14534 [sender.py:send_request():406] send_request: stop_status
+2025-05-24 23:33:37,631 DEBUG   HandlerThread:14534 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-24 23:33:37,878 DEBUG   SenderThread:14534 [sender.py:send():379] send: telemetry
+2025-05-24 23:33:38,250 INFO    Thread-12 :14534 [dir_watcher.py:_on_file_created():271] file/dir created: ./logs/model_1/wandb/run-20250524_233336-tv2fg06y/files/requirements.txt
+2025-05-24 23:33:38,251 INFO    Thread-12 :14534 [dir_watcher.py:_on_file_created():271] file/dir created: ./logs/model_1/wandb/run-20250524_233336-tv2fg06y/files/wandb-metadata.json
+2025-05-24 23:33:38,251 INFO    Thread-12 :14534 [dir_watcher.py:_on_file_created():271] file/dir created: ./logs/model_1/wandb/run-20250524_233336-tv2fg06y/files/output.log
+2025-05-24 23:33:38,272 INFO    wandb-upload_0:14534 [upload_job.py:push():131] Uploaded file /tmp/tmpnlyi6ztjwandb/zfglkq6f-wandb-metadata.json
+2025-05-24 23:33:40,252 INFO    Thread-12 :14534 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./logs/model_1/wandb/run-20250524_233336-tv2fg06y/files/output.log
+2025-05-24 23:33:41,515 INFO    cpu       :14534 [interfaces.py:monitor():140] Process cpu has exited.
+2025-05-24 23:33:41,516 INFO    memory    :14534 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2025-05-24 23:33:41,519 DEBUG   SystemMonitor:14534 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-05-24 23:33:41,519 DEBUG   SystemMonitor:14534 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-05-24 23:33:41,519 DEBUG   SystemMonitor:14534 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-05-24 23:33:41,526 DEBUG   SenderThread:14534 [sender.py:send():379] send: stats
+2025-05-24 23:33:42,527 DEBUG   HandlerThread:14534 [handler.py:handle_request():146] handle_request: status_report
+2025-05-24 23:33:43,376 INFO    MainThread:14534 [internal.py:handle_exit():76] Internal process exited

@@ -1,0 +1,54 @@
+ssh rf24m031@submit01.unibe.ch
+RodManuel@03
+
+srun --job-name="model 3" --time=12:00:00 --ntasks=1 --cpus-per-task=4 --mem=16G --partition=gpu --gpus-per-node=rtx3090:1 --pty bash
+squeue --me
+
+module load Anaconda3
+eval "$(conda shell.bash hook)"
+conda env create -f environment.yaml
+conda activate pr
+
+python train.py --device-id=0 --config-file-path=./configs/config_model_4.yaml --experiment-name=model_4 --num-epochs=10
+
+python evaluate.py -d 0 --checkpoint-path=./checkpoints/model_4/model.pth.tar
+
+
+scp model_5.py rf24m031@submit01.unibe.ch:~/assignment_2/models
+scp config_model_3.yaml rf24m031@submit01.unibe.ch:~/assignment_2/configs
+
+model 1
+BLEU_1 0.42145454545454547
+BLEU_2 0.2137420705599923
+BLEU_3 0.11120793177611757
+BLEU_4 0.06445462826257307
+
+model 2
+BLEU_1 0.5345454545454545
+BLEU_2 0.31001818128502195
+BLEU_3 0.16095497300189565
+BLEU_4 0.0890178880108085
+
+model 3
+BLEU_1 0.5787313432835821
+BLEU_2 0.39254324241073935
+BLEU_3 0.25402114978948054
+BLEU_4 0.16615055648672122
+
+model 4
+BLEU_1 0.6004240555127217
+BLEU_2 0.4235983969682897
+BLEU_3 0.28133589081780114
+BLEU_4 0.18606020109437374
+
+model 5
+BLEU_1 0.6230272596843616
+BLEU_2 0.44975015478122343
+BLEU_3 0.3119113003113897
+BLEU_4 0.2118574123990986
+
+model 6
+BLEU_1 0.6711210096510765
+BLEU_2 0.5094079528295582
+BLEU_3 0.37564967359719065
+BLEU_4 0.27204441786455785

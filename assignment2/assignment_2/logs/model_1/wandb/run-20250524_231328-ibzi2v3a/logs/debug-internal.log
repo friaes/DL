@@ -1,0 +1,61 @@
+2025-05-24 23:13:28,852 INFO    StreamThr :11689 [internal.py:wandb_internal():86] W&B internal server running at pid: 11689, started at: 2025-05-24 23:13:28.852112
+2025-05-24 23:13:28,853 DEBUG   HandlerThread:11689 [handler.py:handle_request():146] handle_request: status
+2025-05-24 23:13:28,855 INFO    WriterThread:11689 [datastore.py:open_for_write():87] open: ./logs/model_1/wandb/run-20250524_231328-ibzi2v3a/run-ibzi2v3a.wandb
+2025-05-24 23:13:28,856 DEBUG   SenderThread:11689 [sender.py:send():379] send: header
+2025-05-24 23:13:28,856 DEBUG   SenderThread:11689 [sender.py:send():379] send: run
+2025-05-24 23:13:28,858 INFO    SenderThread:11689 [sender.py:_setup_resume():749] checking resume status for None/assignment_2/ibzi2v3a
+2025-05-24 23:13:29,307 ERROR   SenderThread:11689 [internal_api.py:execute():373] 403 response executing GraphQL.
+2025-05-24 23:13:29,307 ERROR   SenderThread:11689 [internal_api.py:execute():374] {"errors":[{"message":"permission denied","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertBucket":null}}
+2025-05-24 23:13:29,307 ERROR   SenderThread:11689 [sender.py:send_run():971] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+Traceback (most recent call last):
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/internal/sender.py", line 969, in send_run
+    server_run = self._init_run(run, config_value_dict)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/internal/sender.py", line 1014, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+                                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 2217, in upsert_run
+    response = self.gql(
+               ^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 341, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/util.py", line 968, in check_retry_fn
+    return fallback_retry_fn(e)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/lib/python3.11/site-packages/wandb/util.py", line 910, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2025-05-24 23:13:29,411 DEBUG   HandlerThread:11689 [handler.py:handle_request():146] handle_request: shutdown
+2025-05-24 23:13:29,412 INFO    HandlerThread:11689 [handler.py:finish():866] shutting down handler
+2025-05-24 23:13:29,856 INFO    WriterThread:11689 [datastore.py:close():296] close: ./logs/model_1/wandb/run-20250524_231328-ibzi2v3a/run-ibzi2v3a.wandb
+2025-05-24 23:13:30,314 INFO    SenderThread:11689 [sender.py:finish():1546] shutting down sender

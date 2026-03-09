@@ -1,0 +1,147 @@
+{
+    "os": "Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.37",
+    "python": "3.11.4",
+    "heartbeatAt": "2025-05-24T21:29:32.364708",
+    "startedAt": "2025-05-24T21:29:31.436610",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--device-id=0",
+        "--config-file-path=./configs/config_model_1.yaml",
+        "--experiment-name=model_1",
+        "--num-epochs=2"
+    ],
+    "state": "running",
+    "program": "/home/rodrigo/jmcs/dl/assignement2/assignment_2/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "host": "LAPTOP-DS80IAF6",
+    "username": "rodrigo",
+    "executable": "/home/rodrigo/jmcs/dl/assignement2/assignment_2/dl_a2/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2687.9970000000008,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2687.997,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 250.92389297485352,
+            "used": 105.15252304077148
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 7.623401641845703
+    }
+}

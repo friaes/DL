@@ -1,0 +1,78 @@
+2025-05-25 10:33:59,372 INFO    StreamThr :5306 [internal.py:wandb_internal():86] W&B internal server running at pid: 5306, started at: 2025-05-25 10:33:59.371867
+2025-05-25 10:33:59,374 DEBUG   HandlerThread:5306 [handler.py:handle_request():146] handle_request: status
+2025-05-25 10:33:59,377 INFO    WriterThread:5306 [datastore.py:open_for_write():87] open: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/run-ljqrg92g.wandb
+2025-05-25 10:33:59,377 DEBUG   SenderThread:5306 [sender.py:send():379] send: header
+2025-05-25 10:33:59,378 DEBUG   SenderThread:5306 [sender.py:send():379] send: run
+2025-05-25 10:33:59,380 INFO    SenderThread:5306 [sender.py:_setup_resume():749] checking resume status for None/assignment_2/ljqrg92g
+2025-05-25 10:34:00,112 INFO    SenderThread:5306 [dir_watcher.py:__init__():211] watching files in: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files
+2025-05-25 10:34:00,113 INFO    SenderThread:5306 [sender.py:_start_run_threads():1124] run started: ljqrg92g with start time 1748162039.371128
+2025-05-25 10:34:00,121 DEBUG   HandlerThread:5306 [handler.py:handle_request():146] handle_request: check_version
+2025-05-25 10:34:00,122 DEBUG   SenderThread:5306 [sender.py:send_request():406] send_request: check_version
+2025-05-25 10:34:00,270 DEBUG   HandlerThread:5306 [handler.py:handle_request():146] handle_request: run_start
+2025-05-25 10:34:00,400 DEBUG   HandlerThread:5306 [system_info.py:__init__():26] System info init
+2025-05-25 10:34:00,400 DEBUG   HandlerThread:5306 [system_info.py:__init__():41] System info init done
+2025-05-25 10:34:00,400 INFO    HandlerThread:5306 [system_monitor.py:start():194] Starting system monitor
+2025-05-25 10:34:00,400 INFO    SystemMonitor:5306 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-05-25 10:34:00,400 INFO    HandlerThread:5306 [system_monitor.py:probe():214] Collecting system info
+2025-05-25 10:34:00,403 INFO    SystemMonitor:5306 [interfaces.py:start():190] Started cpu monitoring
+2025-05-25 10:34:00,404 INFO    SystemMonitor:5306 [interfaces.py:start():190] Started disk monitoring
+2025-05-25 10:34:00,405 INFO    SystemMonitor:5306 [interfaces.py:start():190] Started gpu monitoring
+2025-05-25 10:34:00,406 INFO    SystemMonitor:5306 [interfaces.py:start():190] Started memory monitoring
+2025-05-25 10:34:00,406 INFO    SystemMonitor:5306 [interfaces.py:start():190] Started network monitoring
+2025-05-25 10:34:00,428 DEBUG   HandlerThread:5306 [system_info.py:probe():150] Probing system
+2025-05-25 10:34:00,474 DEBUG   HandlerThread:5306 [gitlib.py:_init_repo():56] git repository is invalid
+2025-05-25 10:34:00,474 DEBUG   HandlerThread:5306 [system_info.py:probe():198] Probing system done
+2025-05-25 10:34:00,474 DEBUG   HandlerThread:5306 [system_monitor.py:probe():223] {'os': 'Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.37', 'python': '3.11.9', 'heartbeatAt': '2025-05-25T08:34:00.428522', 'startedAt': '2025-05-25T08:33:59.365712', 'docker': None, 'cuda': None, 'args': ('--device-id=0', '--config-file-path=./configs/config_model_1.yaml', '--experiment-name=model_1', '--num-epochs=2'), 'state': 'running', 'program': '/home/rodrigo/jmcs/dl/assignement2/assignment_2/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'LAPTOP-DS80IAF6', 'username': 'rodrigo', 'executable': '/home/rodrigo/anaconda3/envs/dl_a2/bin/python', 'cpu_count': 10, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2687.998, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}, {'current': 2687.998, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 250.92389297485352, 'used': 112.7281379699707}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 7.623401641845703}}
+2025-05-25 10:34:00,474 INFO    HandlerThread:5306 [system_monitor.py:probe():224] Finished collecting system info
+2025-05-25 10:34:00,474 INFO    HandlerThread:5306 [system_monitor.py:probe():227] Publishing system info
+2025-05-25 10:34:00,474 DEBUG   HandlerThread:5306 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2025-05-25 10:34:01,113 INFO    Thread-12 :5306 [dir_watcher.py:_on_file_created():271] file/dir created: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/conda-environment.yaml
+2025-05-25 10:34:01,694 DEBUG   HandlerThread:5306 [system_info.py:_save_conda():222] Saving conda packages done
+2025-05-25 10:34:01,695 INFO    HandlerThread:5306 [system_monitor.py:probe():229] Finished publishing system info
+2025-05-25 10:34:01,697 DEBUG   SenderThread:5306 [sender.py:send():379] send: files
+2025-05-25 10:34:01,697 INFO    SenderThread:5306 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2025-05-25 10:34:01,730 DEBUG   HandlerThread:5306 [handler.py:handle_request():146] handle_request: python_packages
+2025-05-25 10:34:01,731 DEBUG   SenderThread:5306 [sender.py:send_request():406] send_request: python_packages
+2025-05-25 10:34:01,733 DEBUG   HandlerThread:5306 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-25 10:34:01,733 DEBUG   SenderThread:5306 [sender.py:send_request():406] send_request: stop_status
+2025-05-25 10:34:01,774 DEBUG   HandlerThread:5306 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-25 10:34:02,103 DEBUG   SenderThread:5306 [sender.py:send():379] send: telemetry
+2025-05-25 10:34:02,113 INFO    Thread-12 :5306 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/conda-environment.yaml
+2025-05-25 10:34:02,113 INFO    Thread-12 :5306 [dir_watcher.py:_on_file_created():271] file/dir created: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/output.log
+2025-05-25 10:34:02,113 INFO    Thread-12 :5306 [dir_watcher.py:_on_file_created():271] file/dir created: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/requirements.txt
+2025-05-25 10:34:02,113 INFO    Thread-12 :5306 [dir_watcher.py:_on_file_created():271] file/dir created: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/wandb-metadata.json
+2025-05-25 10:34:02,329 INFO    wandb-upload_0:5306 [upload_job.py:push():131] Uploaded file /tmp/tmpnwihu28gwandb/46gmcknw-wandb-metadata.json
+2025-05-25 10:34:04,113 INFO    Thread-12 :5306 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/output.log
+2025-05-25 10:34:05,110 DEBUG   HandlerThread:5306 [handler.py:handle_request():146] handle_request: status_report
+2025-05-25 10:34:08,376 WARNING StreamThr :5306 [internal.py:is_dead():414] Internal process exiting, parent pid 5293 disappeared
+2025-05-25 10:34:08,379 ERROR   StreamThr :5306 [internal.py:wandb_internal():152] Internal process shutdown.
+2025-05-25 10:34:08,419 INFO    cpu       :5306 [interfaces.py:monitor():140] Process cpu has exited.
+2025-05-25 10:34:08,421 DEBUG   SystemMonitor:5306 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-05-25 10:34:08,423 INFO    memory    :5306 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2025-05-25 10:34:08,423 DEBUG   SystemMonitor:5306 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-05-25 10:34:08,423 DEBUG   SystemMonitor:5306 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-05-25 10:34:08,428 INFO    HandlerThread:5306 [handler.py:finish():866] shutting down handler
+2025-05-25 10:34:08,430 INFO    WriterThread:5306 [datastore.py:close():296] close: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/run-ljqrg92g.wandb
+2025-05-25 10:34:08,430 INFO    HandlerThread:5306 [system_monitor.py:finish():203] Stopping system monitor
+2025-05-25 10:34:08,430 DEBUG   SenderThread:5306 [sender.py:send():379] send: stats
+2025-05-25 10:34:08,431 INFO    HandlerThread:5306 [interfaces.py:finish():202] Joined cpu monitor
+2025-05-25 10:34:08,432 INFO    SenderThread:5306 [sender.py:finish():1546] shutting down sender
+2025-05-25 10:34:08,437 INFO    HandlerThread:5306 [interfaces.py:finish():202] Joined disk monitor
+2025-05-25 10:34:08,471 INFO    HandlerThread:5306 [interfaces.py:finish():202] Joined gpu monitor
+2025-05-25 10:34:08,471 INFO    HandlerThread:5306 [interfaces.py:finish():202] Joined memory monitor
+2025-05-25 10:34:08,472 INFO    HandlerThread:5306 [interfaces.py:finish():202] Joined network monitor
+2025-05-25 10:34:10,115 INFO    SenderThread:5306 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-05-25 10:34:10,118 INFO    SenderThread:5306 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/output.log
+2025-05-25 10:34:10,119 INFO    SenderThread:5306 [dir_watcher.py:finish():388] scan: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files
+2025-05-25 10:34:10,120 INFO    SenderThread:5306 [dir_watcher.py:finish():402] scan save: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/output.log output.log
+2025-05-25 10:34:10,120 INFO    SenderThread:5306 [dir_watcher.py:finish():402] scan save: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/conda-environment.yaml conda-environment.yaml
+2025-05-25 10:34:10,120 INFO    SenderThread:5306 [dir_watcher.py:finish():402] scan save: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/config.yaml config.yaml
+2025-05-25 10:34:10,121 INFO    SenderThread:5306 [dir_watcher.py:finish():402] scan save: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/wandb-metadata.json wandb-metadata.json
+2025-05-25 10:34:10,126 INFO    SenderThread:5306 [dir_watcher.py:finish():402] scan save: ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/requirements.txt requirements.txt
+2025-05-25 10:34:10,128 INFO    SenderThread:5306 [file_pusher.py:finish():172] shutting down file pusher
+2025-05-25 10:34:10,128 INFO    SenderThread:5306 [file_pusher.py:join():178] waiting for file pusher
+2025-05-25 10:34:10,506 INFO    wandb-upload_0:5306 [upload_job.py:push():131] Uploaded file ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/conda-environment.yaml
+2025-05-25 10:34:10,636 INFO    wandb-upload_1:5306 [upload_job.py:push():131] Uploaded file ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/output.log
+2025-05-25 10:34:10,688 INFO    wandb-upload_3:5306 [upload_job.py:push():131] Uploaded file ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/requirements.txt
+2025-05-25 10:34:10,727 INFO    wandb-upload_2:5306 [upload_job.py:push():131] Uploaded file ./logs/model_1/wandb/run-20250525_103359-ljqrg92g/files/config.yaml
+2025-05-25 10:34:10,728 INFO    MainThread:5306 [internal.py:handle_exit():76] Internal process exited
