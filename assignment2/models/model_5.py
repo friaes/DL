@@ -98,7 +98,7 @@ class CaptionGenerator(BaseCaptionGenerator):
         logits = self.to_logits(out)  # [batch, seq_len, vocab]
         logits = rearrange(logits, 'batch sequence_length vocabulary_size -> batch vocabulary_size sequence_length')
 
-        return {'logits': logits, 'indices': logits.argmax(dim=-1)}
+        return {'logits': logits, 'indices': logits.argmax(dim=-2)}
 
     def generate_caption_indices(self, encoded_image, sos_token_index, eos_token_index, max_length):
         device = encoded_image.device
