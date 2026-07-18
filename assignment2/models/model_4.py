@@ -80,7 +80,7 @@ class CaptionGenerator(BaseCaptionGenerator):
         logits = self.to_logits(output)
         logits = rearrange(logits, 'batch sequence_length vocabulary_size -> batch vocabulary_size sequence_length')
 
-        return {'logits': logits, 'indices': logits.argmax(dim=-1), 'hidden_state': hidden_state}
+        return {'logits': logits, 'indices': logits.argmax(dim=-2), 'hidden_state': hidden_state}
 
     def generate_caption_indices(self, encoded_image, sos_token_index, eos_token_index, max_length):
         caption_indices = [sos_token_index]
@@ -97,4 +97,3 @@ class CaptionGenerator(BaseCaptionGenerator):
                 break
 
         return caption_indices[1:]  # drop SOS
-
