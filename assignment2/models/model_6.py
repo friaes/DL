@@ -61,6 +61,7 @@ class CaptionGenerator(BaseCaptionGenerator):
         self.decoder = TransformerDecoder(decoder_layer, num_layers=num_layers)
 
         self.positional_encoding = nn.Parameter(torch.randn(512, embedding_dim) * 0.02)
+        
         self.to_logits = nn.Linear(embedding_dim, vocabulary_size)
 
     def freeze(self):
@@ -89,7 +90,7 @@ class CaptionGenerator(BaseCaptionGenerator):
 
         logits = self.to_logits(output)  # [B, T, V]
         logits = rearrange(logits, 'batch sequence_length vocabulary_size -> batch vocabulary_size sequence_length')
-        return {'logits': logits, 'indices': logits.argmax(dim=-1)}
+        return {'logits': logits, 'indices': logits.argmax(dim=-2)}
 
     def generate_caption_indices(self, encoded_image, sos_token_index, eos_token_index, max_length):
         device = encoded_image.device
@@ -106,4 +107,3 @@ class CaptionGenerator(BaseCaptionGenerator):
                 break
 
         return caption_indices[1:]  # remove SOS
-
